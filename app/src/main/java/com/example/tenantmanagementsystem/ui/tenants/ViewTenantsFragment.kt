@@ -1,4 +1,4 @@
-package com.example.tenantmanagementsystem
+package com.example.tenantmanagementsystem.ui.tenants
 
 import android.content.Intent
 import android.net.Uri
@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
+import com.example.tenantmanagementsystem.data.repository.TenantRepository
 import com.example.tenantmanagementsystem.databinding.FragmentViewTenantBinding
 
 class ViewTenantsFragment : Fragment() {
@@ -15,7 +16,6 @@ class ViewTenantsFragment : Fragment() {
     private var _binding: FragmentViewTenantBinding? = null
     private val binding get() = _binding!!
 
-    // SAFE ARGS: reads the arguments that arrived with the action.
     private val args: ViewTenantsFragmentArgs by navArgs()
 
     override fun onCreateView(

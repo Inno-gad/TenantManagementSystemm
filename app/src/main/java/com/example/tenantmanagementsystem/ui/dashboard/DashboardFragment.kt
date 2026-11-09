@@ -1,4 +1,4 @@
-package com.example.tenantmanagementsystem
+package com.example.tenantmanagementsystem.ui.dashboard
 
 import android.os.Bundle
 import android.util.Log
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.tenantmanagementsystem.data.repository.TenantRepository
 import com.example.tenantmanagementsystem.databinding.FragmentDashboardBinding
 
 class DashboardFragment : Fragment() {
@@ -14,13 +15,11 @@ class DashboardFragment : Fragment() {
     private var _binding: FragmentDashboardBinding? = null
     private val binding get() = _binding!!
 
-    // 1. The Fragment OBJECT is created (no view yet)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d("TENANT_LIFECYCLE", "  DashboardFragment: onCreate")
     }
 
-    // 2. Build the VIEW from fragment_dashboard.xml
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -31,7 +30,6 @@ class DashboardFragment : Fragment() {
         return binding.root
     }
 
-    // 3. The view exists: fill in the metrics and set click listeners
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Log.d("TENANT_LIFECYCLE", "  DashboardFragment: onViewCreated")
@@ -53,38 +51,32 @@ class DashboardFragment : Fragment() {
         }
     }
 
-    // 4. Visible
     override fun onStart() {
         super.onStart()
         Log.d("TENANT_LIFECYCLE", "  DashboardFragment: onStart")
     }
 
-    // 5. In front, user can interact
     override fun onResume() {
         super.onResume()
         Log.d("TENANT_LIFECYCLE", "  DashboardFragment: onResume")
     }
 
-    // 6. Leaving the front
     override fun onPause() {
         super.onPause()
         Log.d("TENANT_LIFECYCLE", "  DashboardFragment: onPause")
     }
 
-    // 7. No longer visible
     override fun onStop() {
         super.onStop()
         Log.d("TENANT_LIFECYCLE", "  DashboardFragment: onStop")
     }
 
-    // 8. The VIEW is destroyed. Clear the binding so the old view can be freed
     override fun onDestroyView() {
         super.onDestroyView()
         Log.d("TENANT_LIFECYCLE", "  DashboardFragment: onDestroyView")
         _binding = null
     }
 
-    // 9. The Fragment OBJECT is destroyed
     override fun onDestroy() {
         super.onDestroy()
         Log.d("TENANT_LIFECYCLE", "  DashboardFragment: onDestroy")
