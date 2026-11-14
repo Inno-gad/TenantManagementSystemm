@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     id("androidx.navigation.safeargs.kotlin")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -49,6 +50,12 @@ dependencies {
     // Architecture Components: ViewModel and LiveData
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.7")
-// Gives Fragments "by activityViewModels()" (used in Stage 4)
+    // Gives Fragments "by activityViewModels()" (used in Stage 4)
     implementation("androidx.fragment:fragment-ktx:1.8.5")
+
+    // Room (Stage 3)
+    val roomVersion = "2.8.4"
+    implementation("androidx.room:room-runtime:$roomVersion")
+    implementation("androidx.room:room-ktx:$roomVersion")
+    ksp("androidx.room:room-compiler:$roomVersion")
 }
