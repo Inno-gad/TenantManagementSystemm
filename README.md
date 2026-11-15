@@ -24,4 +24,4 @@ Latest APK: see **Releases** on the right of this page.
 | 3 | Room | Kayla Munga  | 189636 | https://github.com/Inno-gad/TenantManagementSystemm/pull/10 |
 | 4 | Screens | Sean Kamau   | 168976 | https://github.com/Inno-gad/TenantManagementSystemm/pull/7 |
 | 5 | Data integration | Bill Barasa  | 190354| https://github.com/Inno-gad/TenantManagementSystemm/pull/9 |
-| 6 | Release | Innocent Gad | 183419 | (Paste Stage 6 PR link after creating it) |
+| 6 | Release | Innocent Gad | 183419 | https://github.com/Inno-gad/TenantManagementSystemm/pull/11 |
