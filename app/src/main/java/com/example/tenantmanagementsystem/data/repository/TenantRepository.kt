@@ -1,7 +1,7 @@
 package com.example.tenantmanagementsystem.data.repository
 
 import androidx.lifecycle.LiveData
-import com.example.tenantmanagementsystem.data.TenantDao
+import com.example.tenantmanagementsystem.data.local.TenantDao
 import com.example.tenantmanagementsystem.data.model.Tenant
 
 // THE SINGLE DOOR into the data layer. The ViewModel only talks to this
