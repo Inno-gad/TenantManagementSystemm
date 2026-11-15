@@ -1,4 +1,4 @@
-package com.example.tenantmanagementsystem.data
+package com.example.tenantmanagementsystem.data.local
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
@@ -8,6 +8,11 @@ import androidx.room.Query
 import androidx.room.Update
 import com.example.tenantmanagementsystem.data.model.Tenant
 
+/**
+ * Stage 3 (Room): data access object for the tenants table.
+ * Write operations are suspend functions (called from coroutines in Stage 5).
+ * Read operations return LiveData so the UI updates automatically.
+ */
 @Dao
 interface TenantDao {
 
